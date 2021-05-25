@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_filter"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <ImageView
+        android:id="@+id/iv_filter_over"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/ic_select_filter"/>
+
+    <com.magicFilter.magic_filters.widget.FontTextView
+        android:id="@+id/tv_filter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_filter"
+        android:layout_alignStart="@+id/iv_filter"
+        android:layout_alignEnd="@+id/iv_filter"
+        android:text="test"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:alpha="0.6"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

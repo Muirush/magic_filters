@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".activity.CameraActivity">
+
+    <com.magicFilter.magic_filters.view.CameraSurface
+        android:id="@+id/fl_camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.magicFilter.magic_filters.view.OverCameraView
+        android:id="@+id/over_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="24dp"
+        android:fitsSystemWindows="true"
+        android:padding="12dp"
+        android:src="@drawable/ic_back" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_photo_o"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_alignTop="@+id/ll_bottom"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorCameraLayer"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="40dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_re"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="48dp"
+            android:src="@drawable/afresh_photo" />
+
+        <ImageView
+            android:id="@+id/iv_save"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="48dp"
+            android:src="@drawable/confirm_photo" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorCameraLayer"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="40dp">
+
+        <ImageView
+            android:id="@+id/iv_switch_camera"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/round_camera_background"
+            android:padding="12dp"
+            android:src="@drawable/ic_switch_camera"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_take_photo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/take_photo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.magicFilter.magic_filters.widget.RoundImageView
+            android:id="@+id/iv_gallery"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/round_camera_background"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
